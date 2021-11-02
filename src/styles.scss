@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "~@silvermine/videojs-chromecast/src/scss/videojs-chromecast.scss";
+// @import "~videojs-chromecast/dist/videojs-chromecast.css";
+
+// Images
+$icon-chromecast--default: './assets/images/ic_cast_white_24dp.png' !default;
+$icon-chromecast--hover: './assets/images/ic_cast_white_24dp.png' !default;
+$icon-chromecast-casting: './assets/images/ic_cast_connected_white_24dp.png' !default;
+$icon-chromecast-casting--hover: './assets/images/ic_cast_connected_white_24dp.png' !default;
+
+// Sizes
+$chromecast-icon-size: 12px !default;
+
+.vjs-chromecast-button {
+   .vjs-icon-placeholder {
+      background: url($icon-chromecast--default) center center no-repeat;
+      background-size: contain;
+      display: inline-block;
+      width: $chromecast-icon-size;
+      height: $chromecast-icon-size;
+   }
+   &:hover {
+      cursor: pointer;
+      .vjs-icon-placeholder {
+         background-image: url($icon-chromecast--hover);
+      }
+   }
+   &.vjs-chromecast-casting-state {
+      .vjs-icon-placeholder {
+         background-image: url($icon-chromecast-casting);
+      }
+      &:hover .vjs-icon-placeholder {
+         background-image: url($icon-chromecast-casting--hover);
+      }
+   }
+}
+
+button.vjs-chromecast-button.vjs-control.vjs-button.vjs-hidden {
+  display: block !important;
+}

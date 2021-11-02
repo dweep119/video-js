@@ -47,10 +47,6 @@ export class AppComponent {
       //  }
      }
    })
-   //@ts-ignore
-   window.SILVERMINE_VIDEOJS_CHROMECAST_CONFIG = {
-     preloadWebComponents: true,
-   };
  }
 
 }
